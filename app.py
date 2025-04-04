@@ -17,7 +17,7 @@ import plotly.graph_objs as go
 app = dash.Dash(__name__)
 server=app.server
 # Load Data and Preprocessing Data
-df=pd.read_csv("{Class 8}insurance.csv", engine='python')
+df=pd.read_csv("insurance.csv", engine='python')
 
 #Create single/family status
 df['single_family']=np.where(df.children==0, 'single', 'family')
